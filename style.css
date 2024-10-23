@@ -1,0 +1,46 @@
+body {
+  background: #15b4f6;
+  display: flex;
+  justify-content: center;
+}
+
+#alice-container {
+  width: 90vh;
+  display: grid;
+  place-items: center;
+  grid-template-areas:
+    "a1 . ."
+    ". a2 ."
+    ". . a3";
+}
+
+#alice1 {
+  grid-area: a1;
+}
+
+#alice2 {
+  grid-area: a2;
+}
+
+#alice3 {
+  grid-area: a3;
+}
+
+.rotate-and-fade-out {
+  animation: rotateAndFadeOut 2s forwards;
+}
+#replayButton {
+  font-size: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+@keyframes rotateAndFadeOut {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0);
+    opacity: 0;
+  }
+}
